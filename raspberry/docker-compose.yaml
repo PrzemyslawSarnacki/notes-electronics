@@ -1,0 +1,23 @@
+version: '3.0'
+
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:linux-arm64
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer:/data
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - /opt/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
