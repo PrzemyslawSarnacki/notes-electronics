@@ -56,6 +56,7 @@ sudo docker-compose up
 ```
 
 After all of that home assistant will be available on the `http://RASPBERRY_PI_IP:8123` or `http://raspberry.local:8123`
+I'm not sure why on Android `.local` domains are not working. 
 
 ## Zsh instead of bash (optional)
 This is completely unnecessary but I can't help with myself prefering zsh over bash
