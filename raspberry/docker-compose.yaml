@@ -32,7 +32,7 @@ services:
       - "80:80/tcp"
     environment:
       TZ: 'America/Chicago'
-      # WEBPASSWORD: 'set a secure password here or it will be random'
+      WEBPASSWORD: 'raspberry'
     # Volumes store your data between container upgrades
     volumes:
       - './etc-pihole:/etc/pihole'
