@@ -34,7 +34,7 @@ Connect to the WLED_AP network. It should have password like `wled1234`.
 
 Wire it similar to this:
 
-![](./preview/wiring.jpg)
+![](./preview/wiring.png)
 
 
 This tutorial helped me tremendously to understand LED basics
