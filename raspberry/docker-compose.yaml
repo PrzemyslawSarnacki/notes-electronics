@@ -41,3 +41,11 @@ services:
     cap_add:
       - NET_ADMIN # Recommended but not required (DHCP needs NET_ADMIN)      
     restart: unless-stopped
+  mosquitto:
+      image: eclipse-mosquitto
+      container_name: mosquitto
+      volumes:
+        - /opt/mosquitto:/mosquitto
+      ports:
+        - 1883:1883
+        - 9001:9001    
